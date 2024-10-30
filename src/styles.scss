@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+/* Global font */
+body {
+    font-family: 'Calibri', sans-serif;
+    font-size: 18px;
+    color: #000;
+    /* Default text color */
+}
+
+/* Heading style */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: #2F5597;
+}
+
+/* Button styles */
+button {
+    background-color: #4472C4;
+    color: #ffffff;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #365b96;
+    /* Slightly darker shade on hover */
+}
+
+/* Label color */
+.label {
+    color: black;
+    font-size: 18px;
+}

@@ -1,0 +1,108 @@
+$heading-color: #2F5597;
+$button-color: #4472C4;
+$label-color: black;
+$font-family: 'Calibri', sans-serif;
+$font-size: 18px;
+
+
+
+
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+    font-family: 'Calibri', sans-serif;
+    font-size: 18px;
+}
+
+.sidebar {
+    width: 20%;
+    background-color: #f4f4f4;
+    padding: 20px;
+
+    .sidebar-title {
+        font-size: 24px;
+        color: #2F5597;
+        margin-bottom: 20px;
+    }
+
+    .nav-menu {
+        list-style: none;
+        padding: 0;
+
+        button {
+            width: 100%;
+            background: none;
+            border: none;
+            text-align: left;
+            color: black;
+            font-size: 18px;
+            padding: 10px 0;
+            display: flex;
+            align-items: center;
+
+            .icon {
+                margin-right: 10px;
+            }
+
+            &:hover {
+                color: #4472C4;
+            }
+        }
+    }
+}
+
+.main-content {
+    width: 80%;
+    padding: 20px;
+
+    .header {
+        text-align: center;
+        margin-bottom: 20px;
+
+        .main-title {
+            color: #2F5597;
+            font-size: 24px;
+        }
+    }
+
+    .stats-section {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 20px;
+
+        .stat-card {
+            width: 45%;
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+            h3 {
+                color: #2F5597;
+            }
+        }
+    }
+
+    .summary-section {
+        h3 {
+            color: #2F5597;
+            margin-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+
+            th,
+            td {
+                border: 1px solid #dddddd;
+                padding: 8px;
+                text-align: left;
+            }
+
+            th {
+                background-color: #f2f2f2;
+            }
+        }
+    }
+}
