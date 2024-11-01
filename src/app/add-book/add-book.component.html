@@ -1,1 +1,59 @@
-<p>add-book works!</p>
+<div class="add-book-container">
+    <h1 class="heading">Add Book</h1>
+    <form>
+      <div class="form-group">
+        <label for="isbn" class="label">ISBN Number</label>
+        <input type="number" id="isbn" formControlName="isbn" class="input-field" placeholder="Enter ISBN number" required>
+        <span class="helper-text">Minimum - 5, Maximum - 50, Type - Number only</span>
+      </div>
+  
+      <div class="form-group">
+        <label for="name" class="label">Name</label>
+        <input type="text" id="name" formControlName="name" class="input-field" placeholder="Enter book name" required>
+        <span class="helper-text">Minimum - 5, Maximum - 50, Type - Alpha</span>
+      </div>
+  
+      <div class="form-group">
+        <label for="author" class="label">Author</label>
+        <input type="text" id="author" formControlName="author" class="input-field" placeholder="Enter author name" required>
+        <span class="helper-text">Maximum - 50, Type - Alpha</span>
+      </div>
+  
+      <div class="form-group">
+        <label for="publication" class="label">Publication</label>
+        <input type="text" id="publication" formControlName="publication" class="input-field" placeholder="Enter publication" required>
+        <span class="helper-text">Minimum - 5, Maximum - 50, Type - Alpha</span>
+      </div>
+  
+      <div class="form-group">
+        <label for="details" class="label">Details</label>
+        <textarea id="details" formControlName="details" class="input-field" rows="3" placeholder="Enter book details"></textarea>
+        <span class="helper-text">Minimum - 5, Maximum - 250, Type - Alpha + Num</span>
+      </div>
+  
+      <div class="form-group">
+        <label for="quantity" class="label">Qty.</label>
+        <input type="number" id="quantity" formControlName="quantity" class="input-field" placeholder="Enter quantity" required>
+        <span class="helper-text">Minimum - 1, Maximum - 5, Type - Number</span>
+      </div>
+  
+      <div class="form-group">
+        <label for="price" class="label">Price</label>
+        <input type="number" id="price" formControlName="price" class="input-field" placeholder="Enter price" required>
+        <span class="helper-text">Minimum - 5, Maximum - 2, Type - Number</span>
+      </div>
+  
+      <div class="form-group">
+        <label for="branch" class="label">Branch</label>
+        <select id="branch" formControlName="branch" class="input-field" required>
+          <option value="" disabled selected>Select Branch</option>
+          <option value="IT">IT</option>
+          <option value="Civil">Civil</option>
+          <option value="Mechanical">Mechanical</option>
+        </select>
+      </div>
+  
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+  

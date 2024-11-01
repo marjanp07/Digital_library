@@ -1,37 +1,50 @@
 <div class="dashboard-container">
-    <!-- Sidebar -->
-    <aside class="sidebar">
-      <h2 class="sidebar-title">Dashboard</h2>
-      <ul class="nav-menu">
-        <li><button><i class="icon add"><mat-icon>add</mat-icon></i>Add Book</button></li>
-        <li><button><i class="icon delete"><mat-icon>clear</mat-icon></i>Delete Book</button></li>
-        <li><button><i class="icon view"><mat-icon>import_contacts</mat-icon></i>View Books</button></li>
-        <li><button><i class="icon add-student"><mat-icon>person</mat-icon></i>Add Student</button></li>
-        <li><button><i class="icon issue"><mat-icon>list_alt</mat-icon></i>Issue Book</button></li>
-        <li><button><i class="icon return"><mat-icon>reply</mat-icon></i>Return Book</button></li>
-        <li><button><i class="icon report"><mat-icon>grid_on</mat-icon></i>Report</button></li>
-      </ul>
-    </aside>
-    <!-- local_library -->
-  
-    <!-- Main Content -->
-    <main class="main-content">
-      <div class="header">
-        <h2 class="main-title">Dashboard</h2>
+  <aside class="sidebar">
+    <h2 class="sidebar-title">Dashboard</h2>
+    <ul class="nav-menu">
+      <li><button (click)="AddBook()"><i class="icon add"><mat-icon>add</mat-icon></i>Add Book</button></li>
+      <li><button (click)="DeleteBook()"><i class="icon delete"><mat-icon>clear</mat-icon></i>Delete Book</button></li>
+      <li><button (click)="ViewBook()"><i class="icon view"><mat-icon>import_contacts</mat-icon></i>View Books</button></li>
+      <li><button><i class="icon add-student"><mat-icon>person</mat-icon></i>Add Student</button></li>
+      <li><button><i class="icon issue"><mat-icon>list_alt</mat-icon></i>Issue Book</button></li>
+      <li><button><i class="icon return"><mat-icon>reply</mat-icon></i>Return Book</button></li>
+      <li><button><i class="icon report"><mat-icon>grid_on</mat-icon></i>Report</button></li>
+    </ul>
+  </aside>
+
+  <main class="main-content">
+    <div class="header">
+      <h2 class="main-title">Dashboard</h2>
+    </div>
+    
+    <div class="stats-section">
+      <div class="stat-card">
+        <h3>No. of Books</h3>
+        <google-chart
+          class="large-chart"
+          [title]="chartTitleBar"
+          [type]="chartTypeBar"
+          [data]="chartDataBar"
+          [options]="chartOptionsBar">
+        </google-chart>
       </div>
-      <div class="stats-section">
-        <div class="stat-card">
-          <h3>No. of Books</h3>
-          <!-- Insert bar chart here -->
-        </div>
-        <div class="stat-card">
-          <h3>No. of Books</h3>
-          <!-- Insert pie chart here -->
-        </div>
+
+      <div class="stat-card">
+        <h3>No. of Books</h3>
+        <google-chart
+          class="large-chart"
+          [title]="chartTitlePie"
+          [type]="chartTypePie"
+          [data]="chartDataPie"
+          [options]="chartOptionsPie">
+        </google-chart>
       </div>
-      <div class="summary-section">
-        <h3>Issued Book Summary</h3>
-        <table>
+    </div>
+    
+    <div class="summary-section">
+      <h3>Issued Book Summary</h3>
+      <table>
+        <thead>
           <tr>
             <th>ISBN</th>
             <th>Book Name</th>
@@ -40,7 +53,8 @@
             <th>Name</th>
             <th>Issued On</th>
           </tr>
-          <!-- Sample rows -->
+        </thead>
+        <tbody>
           <tr>
             <td>978-1234567890</td>
             <td>Sample Book</td>
@@ -49,9 +63,8 @@
             <td>John Doe</td>
             <td>2024-10-30</td>
           </tr>
-          <!-- Add more rows as needed -->
-        </table>
-      </div>
-    </main>
-  </div>
-  
+        </tbody>
+      </table>
+    </div>
+  </main>
+</div>
