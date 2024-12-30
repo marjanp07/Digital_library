@@ -1,0 +1,27 @@
+<div class="view-book-container">
+  <h2>All Books</h2>
+  <div class="table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th>Book Name</th>
+          <th>Author Name</th>
+          <th>Price</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let book of books">
+          <td>{{ book.BookName }}</td>
+          <td>{{ book.AuthorName }}</td>
+          <td>{{ book.Price }}</td>
+          <td>
+            <button class="delete-btn" (click)="deleteBook(book.BookID)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

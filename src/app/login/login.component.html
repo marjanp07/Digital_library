@@ -1,15 +1,26 @@
 <div class="login-container">
-    <h1>Digital Library</h1>
-    <div class="login-box">
-      <form>
-        <label class="label">Username</label>
-        <input type="text" formControlName="username" />
-  
-        <label class="label">Password</label>
-        <input type="password" formControlName="password" />
-  
-        <button type="submit" (click)="dashboard()">Login</button>
-      </form>
+  <h1>Digital Library</h1>
+  <div class="login-box">
+    <form>
+      <label class="label">Username</label>
+      <input
+        type="text"
+        [(ngModel)]="username"
+        [ngModelOptions]="{ standalone: true }"
+      />
+
+      <label class="label">Password</label>
+      <input
+        type="password"
+        [(ngModel)]="password"
+        [ngModelOptions]="{ standalone: true }"
+      />
+
+      <button type="button" (click)="dashboard()">Login</button>
+    </form>
+
+    <div class="register-link">
+      <a [routerLink]="['/registration']">New user? Register here</a>
     </div>
   </div>
-  
+</div>

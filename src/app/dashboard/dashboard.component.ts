@@ -55,13 +55,17 @@ export class DashboardComponent {
   };
 
   AddBook() {
-    this.router.navigate(['/AddBook']);
+    this.router.navigate(['/add-book']);
   }
-  DeleteBook() {
-    this.router.navigate(['/DeleteBook']);
-  }
+
   ViewBook() {
-    this.router.navigate(['/ViewBook']);
+    this.router.navigate(['/view-books']);
+  }
+
+  Logout() {
+
+    this.router.navigate(['/login']);
+
   }
 
 }

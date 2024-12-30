@@ -1,0 +1,21 @@
+
+<div class="login-container">
+    <h2>Register</h2>
+    <div class="login-box">
+        <form>
+            <label>Email</label>
+            <input type="text" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" />
+        
+            <label>Username</label>
+            <input type="text" [(ngModel)]="username" [ngModelOptions]="{standalone: true}" />
+        
+            <label>Password</label>
+            <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" />
+        
+            <button type="button" (click)="register()">Register</button>
+          </form>
+
+    </div>
+  </div>
+  
+  
